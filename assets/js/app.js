@@ -211,7 +211,7 @@
   // =========================================================
   const ringStage = $("#ringStage"), ring = $("#ring");
   const ringPicks = [];
-  cats.forEach((c) => c.albums.forEach((a) => ringPicks.push({ c, a, p: a.photos[Math.min(1, a.photos.length - 1)] })));
+  cats.forEach((c) => c.albums.forEach((a) => ringPicks.push({ c, a, p: a.photos[0] })));
   // עד 16 – פיזור שווה בין הקטגוריות
   const ringItems = ringPicks.length > 16 ? ringPicks.filter((_, i) => i % Math.ceil(ringPicks.length / 16) === 0).slice(0, 16) : ringPicks;
   ringItems.forEach(({ c, a, p }) => {
